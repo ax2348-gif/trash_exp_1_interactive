@@ -1,0 +1,11 @@
+{
+ "started_wall": 1794362958.266527,
+ "estimator_epoch_minus_mono": 1793997137.6740692,
+ "args": {
+  "run_dir": "docs/episodes/2026-11-10-trash-can",
+  "arm_hz": 50,
+  "est_hz": 100,
+  "cam_hz": 1.0,
+  "no_cam": false
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "frames": {
+  "base": "floor level at the centre of the wheels; x forward, y left, z up (m); angles CCW from x",
+  "world": "the estimator's frame: the base pose at its last reset; drifts slowly (odometry + IMU heading)",
+  "image": "colour pixels (u right, v down), 640x480, origin top left",
+  "color_optical": "x right, y down, z forward (m), at the camera",
+  "snapshot:<id>": "the base frame at that snapshot's capture time"
+ },
+ "body": {
+  "footprint_m": [
+   0.432,
+   0.432
+  ],
+  "shape": "square, centred on the base origin",
+  "drive": "swerve (holonomic): it can translate in any direction while turning, and turn in place",
+  "wheels": [
+   {
+    "name": "FL",
+    "x": 0.1656,
+    "y": 0.1656
+   },
+   {
+    "name": "FR",
+    "x": 0.1656,
+    "y": -0.1656
+   },
+   {
+    "name": "RR",
+    "x": -0.1656,
+    "y": -0.1656
+   },
+   {
+    "name": "RL",
+    "x": -0.1656,
+    "y": 0.1656
+   }
+  ],
+  "turn_in_place_sweep_radius_m": 0.305,
+  "height_note": "low base (~0.17 m) with a camera mast; the mast is the tallest part"
+ },
+ "camera": {
+  "calibrated": true,
+  "position_base_m": [
+   -0.002,
+   -0.024,
+   1.127
+  ],
+  "height_m": 1.127,
+  "optical_axis_base": [
+   0.92,
+   -0.064,
+   -0.387
+  ],
+  "pitch_down_deg": 22.7,
+  "yaw_deg": -4.0,
+  "roll_deg": 0.3,
+  "hfov_deg": 82.7,
+  "vfov_deg": 66.7,
+  "image_size": [
+   640,
+   480
+  ],
+  "nearest_visible_floor_m": 0.743,
+  "nearest_visible_floor_width_m": 1.974,
+  "image_centre_hits_floor_at_m": 2.602,
+  "top_of_image": "above the horizon (sees walls and tall objects)",
+  "blind_zone": "the floor within ~0.74 m of the base centre (~0.53 m beyond the front edge) is never visible, nor anything beside or behind the robot",
+  "base_to_color": [
+   [
+    -0.067749,
+    -0.385963,
+    0.920023,
+    -0.001967
+   ],
+   [
+    -0.997691,
+    0.021795,
+    -0.064325,
+    -0.023613
+   ],
+   [
+    0.004776,
+    -0.922256,
+    -0.386549,
+    1.127121
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "calibration": {
+   "source": {
+    "nominal": true,
+    "ground": "20261108-183306",
+    "yaw": "20261108-185321",
+    "residual_deg": [
+     0.0269,
+     0.4085,
+     0.273
+    ]
+   },
+   "serial": "CPC64630004G"
+  }
+ },
+ "limits": {
+  "profile": "cautious",
+  "caps": {
+   "max_speed": 0.08,
+   "max_omega": 0.5,
+   "max_accel": 0.2,
+   "max_alpha": 0.8,
+   "max_jerk": 0.8,
+   "max_ang_jerk": 3.0,
+   "max_distance": 2.0,
+   "max_rotation": 3.2
+  },
+  "wheel_speed_max_m_s": 3.0,
+  "steer_rate_max_rad_s": 12.566
+ },
+ "sensing_notes": [
+  "only the forward camera: nothing beside or behind the robot is seen; turn to look",
+  "depth is weak on glass, mirrors, black / shiny surfaces and thin legs or cables",
+  "the stop reflex sees only what the camera sees, beyond the blind zone"
+ ],
+ "diagram": "images/robot-142.png"
+}
