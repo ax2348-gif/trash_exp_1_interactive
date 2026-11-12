@@ -1,0 +1,3 @@
+#!/bin/sh
+# episode wrapper: every robot call goes through tools/agent_mm/mm.py with MM_RUN set
+MM_RUN=/Users/aves/Documents/code/robot_utils/docs/episodes/2026-11-10-trash-can exec python3 /Users/aves/Documents/code/robot_utils/tools/agent_mm/mm.py "$@"
